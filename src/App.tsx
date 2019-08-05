@@ -1,5 +1,14 @@
 import React, { FC } from "react";
+import { Router } from "@reach/router";
 
-const App: FC = () => <div />;
+import Home from "./pages/Home";
+
+const App: FC = () => (
+  <div>
+    <Router>
+      <Home path="/" />
+    </Router>
+  </div>
+);
 
 export default App;
