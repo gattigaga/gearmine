@@ -50,6 +50,7 @@ const Button: FC<Props> = ({
       className={className}
       to={href}
       onClick={onClick}
+      isOutline={isOutline}
       isFullWidth={isFullWidth}
     >
       {label}
