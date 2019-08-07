@@ -7,6 +7,7 @@ import Counter from "../components/Counter";
 const Container = styled.div`
   width: 100%;
   border: 1px solid #ddd;
+  box-sizing: border-box;
   display: flex;
   padding: 12px;
   margin-bottom: 12px;
