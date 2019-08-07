@@ -30,12 +30,13 @@ const Input = styled.input`
 `;
 
 type Props = {
+  defaultValue?: number;
   onDecrement?: (value: number) => void;
   onIncrement?: (value: number) => void;
 };
 
-const Counter: FC<Props> = ({ onDecrement, onIncrement }) => {
-  const [value, setValue] = useState(1);
+const Counter: FC<Props> = ({ defaultValue, onDecrement, onIncrement }) => {
+  const [value, setValue] = useState(defaultValue || 1);
 
   const increase = (step: number) => {
     setValue(prevValue => prevValue + step);
