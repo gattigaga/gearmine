@@ -94,7 +94,6 @@ const ProductDetail: FC<Props> = () => {
       <Helmet>
         <title>Gearmine | #1 Gadget Shop</title>
       </Helmet>
-      <Header />
       <Wrapper>
         <MainSection>
           <Image src="https://via.placeholder.com/320x320" />

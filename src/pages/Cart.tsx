@@ -113,7 +113,6 @@ const Cart: FC<Props> = () => {
       <Helmet>
         <title>Gearmine | #1 Gadget Shop</title>
       </Helmet>
-      <Header />
       <Wrapper>
         <Section>
           <Title>Cart</Title>

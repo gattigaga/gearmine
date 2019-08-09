@@ -63,7 +63,6 @@ const Home: FC<Props> = () => {
       <Helmet>
         <title>Gearmine | #1 Gadget Shop</title>
       </Helmet>
-      <Header />
       <Wrapper>
         <StyledCarousel>
           <img src="https://via.placeholder.com/1080x400?text=Dummy%201" />

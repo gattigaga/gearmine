@@ -1,18 +1,28 @@
 import React, { FC } from "react";
-import { Router } from "@reach/router";
+import { Router, navigate } from "@reach/router";
 
+import Header from "./components/Header";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import ProductDetail from "./pages/ProductDetail";
+import ProductsByKeyword from "./pages/ProductsByKeyword";
 
-const App: FC = () => (
-  <div>
-    <Router>
-      <Home path="/" />
-      <Cart path="/cart" />
-      <ProductDetail path="/product/:slug" />
-    </Router>
-  </div>
-);
+const App: FC = () => {
+  const search = (keyword: string) => {
+    navigate(`/search?keyword=${keyword}`);
+  };
+
+  return (
+    <div>
+      <Header onSearch={search} />
+      <Router>
+        <Home path="/" />
+        <Cart path="/cart" />
+        <ProductDetail path="/product/:slug" />
+        <ProductsByKeyword path="/search" />
+      </Router>
+    </div>
+  );
+};
 
 export default App;
