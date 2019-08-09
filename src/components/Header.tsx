@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, KeyboardEvent, useState, ChangeEvent } from "react";
 import styled from "styled-components";
 import { Link } from "@reach/router";
 
@@ -42,13 +42,35 @@ const StyledButton = styled(Button)`
   margin-left: 8px;
 `;
 
-const Header: FC = () => {
+type Props = {
+  onSearch?: (keyword: string) => void;
+};
+
+const Header: FC<Props> = ({ onSearch }) => {
+  const [keyword, setKeyword] = useState("");
+
+  const updateKeyword = (event: ChangeEvent<HTMLInputElement>) => {
+    setKeyword(event.target.value);
+  };
+
+  const onKeyPressEnter = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      onSearch && onSearch(keyword);
+    }
+  };
+
   return (
     <Container>
       <StyledLink to="/">
         <Title>Gearmine</Title>
       </StyledLink>
-      <Input type="search" value="" placeholder="Search product" />
+      <Input
+        type="text"
+        value={keyword}
+        placeholder="Search product"
+        onKeyPress={onKeyPressEnter}
+        onChange={updateKeyword}
+      />
       <Button label="Login" href="/login" isOutline />
       <StyledButton label="Register" href="/register" />
     </Container>
