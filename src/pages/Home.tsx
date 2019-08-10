@@ -4,8 +4,6 @@ import styled from "styled-components";
 import Carousel from "nuka-carousel";
 import uuid from "uuid/v4";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Product from "../components/Product";
 
 const Wrapper = styled.div`
@@ -88,7 +86,6 @@ const Home: FC<Props> = () => {
           </ProductList>
         </Section>
       </Wrapper>
-      <Footer />
     </div>
   );
 };

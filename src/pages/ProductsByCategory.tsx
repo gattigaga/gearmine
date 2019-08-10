@@ -2,9 +2,7 @@ import React, { FC } from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import uuid from "uuid/v4";
-import queryString from "query-string";
 
-import Footer from "../components/Footer";
 import Product from "../components/Product";
 
 const Wrapper = styled.div`
@@ -63,7 +61,6 @@ const ProductsByCategory: FC<Props> = () => {
           </ProductWrapper>
         </Section>
       </Wrapper>
-      <Footer />
     </div>
   );
 };

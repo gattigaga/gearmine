@@ -4,8 +4,6 @@ import styled from "styled-components";
 import uuid from "uuid/v4";
 import queryString from "query-string";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Product from "../components/Product";
 
 const Wrapper = styled.div`
@@ -66,7 +64,6 @@ const ProductsByKeyword: FC<Props> = () => {
           </ProductWrapper>
         </Section>
       </Wrapper>
-      <Footer />
     </div>
   );
 };

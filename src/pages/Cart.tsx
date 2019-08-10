@@ -3,8 +3,6 @@ import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import uuid from "uuid/v4";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import CartItem from "../components/CartItem";
 import Button from "../components/Button";
 
@@ -143,7 +141,6 @@ const Cart: FC<Props> = () => {
           </MainSection>
         </Section>
       </Wrapper>
-      <Footer />
     </Container>
   );
 };

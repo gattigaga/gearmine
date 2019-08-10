@@ -3,8 +3,6 @@ import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import uuid from "uuid/v4";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Product from "../components/Product";
 import Button from "../components/Button";
 import Counter from "../components/Counter";
@@ -120,7 +118,6 @@ const ProductDetail: FC<Props> = () => {
           </ProductList>
         </Section>
       </Wrapper>
-      <Footer />
     </div>
   );
 };
