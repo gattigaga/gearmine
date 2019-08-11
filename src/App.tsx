@@ -8,6 +8,7 @@ import ProductDetail from "./pages/ProductDetail";
 import ProductsByKeyword from "./pages/ProductsByKeyword";
 import ProductsByCategory from "./pages/ProductsByCategory";
 import Register from "./pages/Register";
+import Login from "./pages/Login";
 
 const App: FC = () => {
   return (
@@ -21,6 +22,7 @@ const App: FC = () => {
           <ProductsByCategory path="/category/:slug" />
         </Main>
         <Register path="/register" />
+        <Login path="/login" />
       </Router>
     </div>
   );
