@@ -9,6 +9,7 @@ import ProductsByKeyword from "./pages/ProductsByKeyword";
 import ProductsByCategory from "./pages/ProductsByCategory";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Checkout from "./pages/Checkout";
 
 const App: FC = () => {
   return (
@@ -20,6 +21,7 @@ const App: FC = () => {
           <ProductDetail path="/product/:slug" />
           <ProductsByKeyword path="/search" />
           <ProductsByCategory path="/category/:slug" />
+          <Checkout path="/checkout" />
         </Main>
         <Register path="/register" />
         <Login path="/login" />
