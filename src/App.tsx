@@ -11,6 +11,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Checkout from "./pages/Checkout";
 import OrderList from "./pages/OrderList";
+import OrderDetail from "./pages/OrderDetail";
 
 const App: FC = () => {
   return (
@@ -24,6 +25,7 @@ const App: FC = () => {
           <ProductsByCategory path="/category/:slug" />
           <Checkout path="/checkout" />
           <OrderList path="/orders" />
+          <OrderDetail path="/orders/:code" />
         </Main>
         <Register path="/register" />
         <Login path="/login" />
